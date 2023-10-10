@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=VT323&display=swap');
+body {
+  overflow-x: hidden;
+  max-width: 1920px;
+}
+html {
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Space Grotesk', sans-serif;
+  color: black;
+}
+
+.slide-left {
+  color: white;
+  animation: slideleft 0.5s linear forwards;
+}
+
+ /* Navbar StyleSheet */
+.header {
+  display: flex; 
+  align-items: center;
+  justify-content: space-around;
+  /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+  background-color: rgb(243, 243, 243);
+  border-bottom: 5px solid #EE0103;
+}
+.nav-title {
+  font-size: 32px;
+  margin-bottom: 0 !important;
+
+}
+.items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.items a {
+  text-decoration: none;
+  font-size: 17px;
+  color: black;
+}
+a:hover{
+  color: #EE0103;
+}
+.active{
+  display: none;
+}
+.nav-menu{
+  background-color: transparent;
+  border: 1px solid red;
+  border-radius: 10px;
+  width: 50px;
+  height: 40px;
+  padding: 6px;
+}
+.nav-menu:hover {
+  background-color: red;
+}
+.handleClose{
+  background-color: transparent;
+  border: 1px solid red;
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  color: red;
+}
+.handleClose:hover{
+  background-color: red;
+  border: none;
+  color: white;
+}
+/* End navbar stylesheet */
+
+/* HeroSection Stylesheet */
+.hero{
+  display: flex; 
+  align-items: center ; 
+  justify-content: center;
+  margin-top: 70px;
+  gap: 80px;
+}
+#salimdev {
+  background-image: url("/assets/hero-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.img img {
+  max-width: 70%;
+  width: 840px;
+ }
+.hire-btn {
+  width:25%;
+  height: 40px;
+  border: 1px solid  #EE0103;
+  border-radius: 7px;
+  background-color: transparent;
+  color: #EE0103;
+  font-weight: bold;
+ }
+
+.hire-btn:hover {
+  transition: 200ms;
+  background-color: red;
+  color: white ; 
+ }
+ .link:hover{
+  transition: 200ms;
+  background-color: red;
+  color: white ; 
+ }
+ /* End HeroSection Stylesheet */
+
+/* About stylesheet */
+ .informations {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 50px;
+ }
+ .introduction{
+  max-width: 40%;
+  /* text-align: center; */
+  font-size: 18px;
+ }
+ .info-box {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+ }
+/* End about stylesheet */
+
+/* Projects Stylesheet */
+
+.movies{
+  background-color: rgb(247, 247, 247);
+  width: 100%;
+  color: black;
+  font-size: 20px;
+  padding-left: 10px;
+  /* border: 1px solid black; */
+  border-bottom: 0px;
+  font-weight: bold;
+  margin-left: 10px;
+  height: 40Px;
+  border-radius: 10px 10px 10px 0px;
+}
+.movie{
+  width: 90%; 
+  background-color: #EE0103;
+  height: 5px;
+  border-radius: 10px 10px 10px 10px;
+  margin-left: 10px;
+}
+.weather {
+  width: 98%; 
+  background-color: #EE0103;
+  height: 5px;
+  border-radius: 10px 10px 10px 10px;
+  margin-left: 10px;
+}
+.slams {
+  width: 70%; 
+  background-color: #EE0103;
+  height: 5px;
+  border-radius: 10px 10px 10px 10px;
+  margin-left: 10px;
+}
+.spotify{
+  width: 5%; 
+  background-color: #EE0103;
+  height: 5px;
+  border-radius: 10px 10px 10px 10px;
+  margin-left: 10px;
+}
+.barbaros {
+  width: 99%; 
+  background-color: #EE0103;
+  height: 5px;
+  border-radius: 10px 10px 10px 10px;
+  margin-left: 10px;
+}
+.tshop {
+  width: 75%; 
+  background-color: #EE0103;
+  height: 5px;
+  border-radius: 10px 10px 10px 10px;
+  margin-left: 10px;
+}
+.skills {
+  text-align: right;
+  color: white;
+}
+/* End projects stylesheet */
+
+/* Diplome StyleSheet */
+
+ .diplome {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+ }
+ .diplome img {
+    max-width: 90%;
+    width: 490px;
+ }
+/* End Diplome StyleSheet */
+
+
+ /* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #EE0103; }
+}
+.typewriter h2 {
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  /* border-right: 1Px solid #EE0103 ;  */
+  white-space: nowrap;
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  /* letter-spacing: .15em; Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+ /* End of The typing effect */
+
+ /* Hire stylesheet */
+.contact-btn{
+  height: 40px;
+  border: 1px solid  #EE0103;
+  border-radius: 7px;
+  background-color: transparent;
+  color: #EE0103;
+  padding: 7px;
+  font-weight: bold;
+  text-decoration: none;
+}
+.contact-btn:hover {
+  transition: 200ms;
+  background-color: red;
+  color: white ; 
+}
+.hire {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 1920px;
+}
+.hire p {
+  width: 50%;
+  font-size: large;
+  text-align: center;
+}
+/* End of the hire stylesheet */
+  /* Footer style sheet */
+footer {
+  border:  1px  solid black;
+  height: 100px;
+  padding-top: 30px;
+}
+/* End of footer stylesheet */
+
+@keyframes slideleft {
+  0% {
+    transform: translate(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(0px);
+    opacity: 1;
+  }
+}
+
+/* Responsivity */
+@media only screen and (max-width: 600px) {
+  .hero {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  .informations {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .introduction p {
+    width: 330px;
+    margin-left: -92px;
+    font-size: 15px;
+    text-align: center;
+  }
+  .items {
+    display: none;
+  }
+  .active{
+    display: block;
+  }
+  .diplome {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+  
+  }
+  .info-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .diplome img {
+    width: 100%;
+ }
+
+ } 
+/*  End of Responsivity  */
+
+#back {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 50px; 
+}
+#back button {
+  background-color: transparent;
+  border: 1px solid red;
+  height: 50px;
+  width: 50px;
+  margin-bottom: -10px;
+  border-radius: 10px;
+}
+#back button:hover {
+  background-color: red;
+  color: white;
+  transition: 200ms;
+}
